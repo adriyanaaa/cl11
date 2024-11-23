@@ -72,7 +72,7 @@ int dei_imp(int st, int dr){
 int dei_cresc(int st, int dr){
     // verifica daca sunt crescatoare
     if(st >= dr - 1)
-        return v[st] < v[dr];
+        return v[st] <= v[dr];
     else{
         int m = (st + dr) / 2;
         return dei_cresc(st, m) && dei_cresc(m, dr);
